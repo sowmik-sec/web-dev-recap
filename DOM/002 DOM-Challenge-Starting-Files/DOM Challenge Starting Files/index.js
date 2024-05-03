@@ -3,3 +3,4 @@ var googleLink = document.querySelector("li a");
 
 // Change the color of the selected <a> element to red
 googleLink.style.color = "red";
+document.querySelector("button").style.backgroundColor = "yellow";
