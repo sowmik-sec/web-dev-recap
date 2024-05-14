@@ -14,7 +14,7 @@ env.config();
 
 app.use(
   session({
-    secret: "TOPSECRETWORD",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
   })
@@ -26,10 +26,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const db = new pg.Client({
-  user: "postgres",
+  user: process.env.PG_USER,
   host: "localhost",
   database: "secrets",
-  password: "123456",
+  password: "asdf12",
   port: 5432,
 });
 db.connect();
